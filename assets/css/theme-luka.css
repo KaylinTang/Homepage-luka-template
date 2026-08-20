@@ -19,6 +19,7 @@ body.theme-luka *::after {
 }
 
 :root {
+  --institution-logo-size: 52px;
   --luka-bg: #faf9f7;
   --luka-text: #3d3929;
   --luka-accent: #c2714f;
@@ -251,7 +252,7 @@ body.theme-luka .cv-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 18px;
+  margin: 0 0 18px;
   padding: 7px 13px;
   border: 1px solid var(--luka-border);
   border-radius: 999px;
@@ -262,10 +263,6 @@ body.theme-luka .cv-link {
 
 body.theme-luka .cv-link:hover {
   background: var(--luka-border);
-}
-
-body.theme-luka .institution-link {
-  color: inherit;
 }
 
 body.theme-luka .visitor-card {
@@ -372,22 +369,76 @@ body.theme-luka .experience-item {
 }
 
 body.theme-luka .institution-logo {
-  width: 52px;
-  height: 52px;
+  width: var(--institution-logo-size);
+  height: var(--institution-logo-size);
   flex-shrink: 0;
   object-fit: contain;
+}
+
+body.theme-luka .education-item {
+  display: grid;
+  grid-template-columns: var(--institution-logo-size) minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: start;
+}
+
+body.theme-luka .education-logo-wrapper {
+  width: var(--institution-logo-size);
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+body.theme-luka .institution-logo--uwa {
+  width: var(--institution-logo-size);
+  height: auto;
+  max-width: var(--institution-logo-size);
+  max-height: none;
+  aspect-ratio: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center top;
+  border-radius: 0;
+  clip-path: none;
+  transform: none;
+}
+
+body.theme-luka .education-content {
+  grid-column: 2;
+  min-width: 0;
+  margin: 0;
 }
 
 body.theme-luka .theme-logo {
   position: relative;
   display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--luka-bg);
 }
 
 body.theme-luka .theme-logo img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   display: block;
+  max-width: none;
   object-fit: contain;
+  object-position: center;
+  transform: translate(-50%, -50%);
+}
+
+body.theme-luka .theme-logo .theme-logo-on-light {
+  width: 162.5%;
+  height: 162.5%;
+}
+
+body.theme-luka .theme-logo .theme-logo-on-dark {
+  width: 184%;
+  height: 184%;
 }
 
 body.theme-luka .theme-logo-on-dark {
@@ -645,6 +696,10 @@ body.theme-luka strong {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --institution-logo-size: 44px;
+  }
+
   body.theme-luka .nav-container {
     padding: 0 12px;
     gap: 8px;
@@ -676,9 +731,8 @@ body.theme-luka strong {
     gap: 12px;
   }
 
-  body.theme-luka .institution-logo {
-    width: 44px;
-    height: 44px;
+  body.theme-luka .education-item {
+    column-gap: 12px;
   }
 
   body.theme-luka .visitor-card {
