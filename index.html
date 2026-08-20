@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name - Homepage</title>
-  <meta name="description" content="A minimal academic homepage template for researchers, students, and creators.">
-  <meta name="keywords" content="academic homepage, personal website, portfolio, researcher, student">
+  <title>Kaylin Tang | Personal Homepage</title>
+  <meta name="description" content="Kaylin Tang is a Master of Information Technology student at UWA with interests in web development, UX, solution design, and cloud computing.">
+  <meta name="author" content="Kaylin Tang">
+  <meta name="keywords" content="Kaylin Tang, UWA, information technology, web development, UX, solution design, cloud computing">
+  <meta property="og:title" content="Kaylin Tang | Personal Homepage">
+  <meta property="og:description" content="Kaylin Tang is a Master of Information Technology student at UWA with interests in web development, UX, solution design, and cloud computing.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +24,18 @@
   <link rel="stylesheet" href="assets/css/theme-luka.css">
 </head>
 <body class="theme-luka">
-  <nav class="top-nav">
+  <nav class="top-nav" aria-label="Primary navigation">
     <div class="nav-container">
       <div class="nav-left">
-        <a href="./">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
       </div>
       <div class="nav-right">
-        <button id="themeToggle" class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon"></i>
+        <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
       </div>
     </div>
@@ -36,138 +44,151 @@
   <div class="wrapper">
     <header class="sidebar">
       <div class="profile-card">
-        <a class="image avatar">
-          <img src="assets/img/avatar.svg" alt="Profile avatar">
-        </a>
-
-        <h1 class="site-name">Your Name</h1>
-        <p class="site-email">your.email@example.com</p>
-
-        <div class="social-icons">
-          <a href="mailto:your.email@example.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://scholar.google.com/" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-          <a href="https://github.com/yourname" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://yourblog.example.com" title="Blog"><i class="fa-solid fa-rss"></i></a>
+        <div class="image avatar">
+          <img src="assets/img/avatar.svg" alt="Profile avatar placeholder for Kaylin Tang">
         </div>
 
-        <div class="visitor-card">
-          <div class="visitor-card-title">Visitor Map</div>
-          <div class="visitor-card-body">
-            Replace this card with your own ClustrMaps image or analytics widget.
-          </div>
+        <h1 class="site-name">Kaylin Tang</h1>
+        <p class="site-role">Master of Information Technology Student at The University of Western Australia</p>
+        <p class="site-location">Perth, Western Australia</p>
+        <p class="site-email">
+          <a href="mailto:24320547@student.uwa.edu.au">24320547@student.uwa.edu.au</a>
+        </p>
+
+        <div class="social-icons" aria-label="Contact links">
+          <a href="mailto:24320547@student.uwa.edu.au" title="Email" aria-label="Email Kaylin Tang">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+          <!-- TODO(KAYLIN): Add GitHub profile URL -->
+          <a
+            href="https://www.linkedin.com/in/kaylin-t-57ba13352/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="Kaylin Tang on LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
         </div>
+
+        <!-- TODO(KAYLIN): Add English CV -->
       </div>
     </header>
 
-    <section class="content">
-      <div class="section" id="about">
+    <main class="content">
+      <section class="section" id="about">
         <h2 class="section-title">About Me</h2>
         <div class="section-body">
-          <p>Hello! I am <strong>Your Name</strong>, a student / researcher / engineer working on topics that matter to you. This template is designed to make personal academic websites clean, readable, and easy to adapt.</p>
-          <p>You can use this section to briefly introduce your background, research interests, and current affiliations. Keep it concise and personal.</p>
-          <p><strong><a href="#" target="_blank" rel="noopener">Download my CV</a></strong> (replace this link with your resume)</p>
+          <p>I am Kaylin Tang, a final-semester Master of Information Technology student at The University of Western Australia, expecting to graduate in December 2026. My interests within technology include web development, UX and user-centred design, solution design, and cloud computing. I enjoy understanding practical problems through a combination of technology, clear communication, and user research, then shaping solutions that respond to real needs. As I complete my degree, I am preparing for graduate or entry-level technology opportunities where I can continue learning and contribute thoughtfully as part of a team. Outside my studies, I enjoy photography, Chinese chess, Chinese calligraphy, and piano. These interests give me different ways to observe details, think strategically, appreciate structure, and stay creative.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="section" id="education">
+      <section class="section" id="education">
         <h2 class="section-title">Education</h2>
         <div class="section-body">
-          <div class="card">
+          <div class="card timeline-item">
             <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution logo" class="institution-logo">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
               <div class="experience-content">
-                <p class="exp-title"><strong>Your University</strong></p>
-                <p class="exp-detail">B.S. / M.S. / Ph.D. in Your Major</p>
-                <p class="exp-period">2022 - 2026</p>
+                <p class="exp-title"><strong>The University of Western Australia</strong></p>
+                <p class="exp-detail">Master of Information Technology</p>
+                <p class="exp-detail">Perth, Western Australia</p>
+                <p class="exp-period">Expected graduation: December 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Nanjing University of Aeronautics and Astronautics</strong></p>
+                <p class="exp-detail">Bachelor of Engineering</p>
+                <p class="exp-detail">Major in Transportation (Civil Aviation Transportation Management)</p>
+                <p class="exp-detail">Nanjing, China</p>
+                <p class="exp-period">2017–2021</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="section" id="experience">
+      <section class="section" id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="section-body">
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution logo" class="institution-logo">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
               <div class="experience-content">
-                <p class="exp-title"><strong>Research Lab / Company Name</strong></p>
-                <p class="exp-detail">Research Intern / Engineer / Assistant</p>
-                <p class="exp-detail"><em>Advisor:</em> Prof. / Dr. Name</p>
-                <p class="exp-period">2025 - Present</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution logo" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>Previous Institution</strong></p>
-                <p class="exp-detail">Research Intern / Teaching Assistant</p>
-                <p class="exp-detail"><em>Advisor:</em> Prof. / Dr. Name</p>
-                <p class="exp-period">2024 - 2025</p>
+                <p class="exp-title"><strong>UWA IT</strong></p>
+                <p class="exp-detail">Winter Intern</p>
+                <p class="exp-detail">Completed through the McCusker Centre for Citizenship</p>
+                <ul class="experience-list">
+                  <li>Supported the preparation and improvement of the myUWA student portal.</li>
+                  <li>Participated in student workshops and user-feedback activities.</li>
+                  <li>Collected and analysed student feedback, contributing recommendations for UX improvement.</li>
+                  <li>Collaborated with other interns and UWA IT staff.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="section" id="projects">
-        <h2 class="section-title">Projects</h2>
+      <section class="section" id="skills">
+        <h2 class="section-title">Skills</h2>
         <div class="section-body">
-          <div class="card project-card">
-            <a href="https://github.com/yourname/project-name">Project Name</a>: A short one-line summary describing what this project does and why it matters.
-          </div>
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Git and GitHub</li>
+            <li>AWS Fundamentals</li>
+            <li>UX Research</li>
+            <li>Requirements Analysis</li>
+            <li>Prototyping</li>
+            <li>Team Collaboration</li>
+            <li>Client Communication</li>
+          </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="section" id="publications">
-        <h2 class="section-title">Publications</h2>
+      <section class="section" id="interests">
+        <h2 class="section-title">Interests</h2>
         <div class="section-body">
-          <div class="publications">
-            <ol class="bibliography">
-              <li>
-                <div class="pub-row">
-                  <div class="pub-content">
-                    <div class="title">Paper Title Goes Here</div>
-                    <div class="author"><strong>Your Name</strong>, Coauthor A, Coauthor B</div>
-                    <div class="periodical"><em><strong>Conference / Journal / arXiv</strong></em></div>
-                    <div class="links">
-                      <a href="#">Paper</a> / <a href="#">Code</a> / <a href="#">Project</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-
-      <div class="section" id="awards">
-        <h2 class="section-title">Awards</h2>
-        <div class="section-body">
-          <div class="awards-grid">
-            <div class="award-item">
-              <span class="award-icon">🏅</span>
-              <div class="award-text"><strong>Award Name</strong></div>
+          <dl class="interests-list">
+            <div>
+              <dt>Photography</dt>
+              <dd>I enjoy using photography to record places, everyday moments, and visual details.</dd>
             </div>
-            <div class="award-item">
-              <span class="award-icon">🥇</span>
-              <div class="award-text"><strong>Competition / Scholarship / Honor</strong></div>
+            <div>
+              <dt>Chinese Chess (Xiangqi)</dt>
+              <dd>I enjoy the strategic thinking, judgement, and different possibilities that emerge in each game.</dd>
             </div>
-          </div>
+            <div>
+              <dt>Chinese Calligraphy</dt>
+              <dd>I am interested in its structure, rhythm, traditional aesthetics, and the process of writing.</dd>
+            </div>
+            <div>
+              <dt>Piano</dt>
+              <dd>Playing piano helps me relax and stay creative outside study and technology work.</dd>
+            </div>
+          </dl>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- TODO(KAYLIN): Add projects here -->
+      <!-- TODO(KAYLIN): Add publications here -->
+      <!-- TODO(KAYLIN): Add awards here -->
+    </main>
 
     <footer class="site-footer">
       <p>
-        &copy; 2026 Your Name. All rights reserved.
+        &copy; 2026 Kaylin Tang
         <br>
-        <span class="template-credit"><a href="https://github.com/wzsyyh/luka-homepage-template">Luka Homepage Template</a> by <a href="https://wzsyyh.github.io/">Yuheng Yang</a></span>
+        <span class="template-credit"><a href="https://github.com/wzsyyh/luka-homepage-template" target="_blank" rel="noopener noreferrer">Luka Homepage Template</a> by <a href="https://wzsyyh.github.io/" target="_blank" rel="noopener noreferrer">Yuheng Yang</a></span>
       </p>
     </footer>
   </div>

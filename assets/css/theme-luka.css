@@ -86,6 +86,12 @@ body.theme-luka a:hover {
   filter: brightness(1.15);
 }
 
+body.theme-luka a:focus-visible,
+body.theme-luka button:focus-visible {
+  outline: 2px solid var(--luka-accent);
+  outline-offset: 3px;
+}
+
 body.theme-luka .top-nav {
   position: fixed;
   top: 0;
@@ -109,10 +115,16 @@ body.theme-luka .nav-container {
   justify-content: space-between;
 }
 
+body.theme-luka .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 body.theme-luka .nav-left a {
   color: var(--luka-text);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 body.theme-luka .theme-toggle {
@@ -186,6 +198,20 @@ body.theme-luka .site-name {
   line-height: 1.2;
 }
 
+body.theme-luka .site-role {
+  margin: 0 auto 8px;
+  max-width: 260px;
+  color: var(--luka-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+body.theme-luka .site-location {
+  margin: 0 0 8px;
+  color: var(--luka-secondary);
+  font-size: 13px;
+}
+
 body.theme-luka .site-email {
   margin: 0 0 24px;
   color: var(--luka-secondary);
@@ -253,6 +279,7 @@ body.theme-luka .content {
 
 body.theme-luka .section {
   margin-bottom: 44px;
+  scroll-margin-top: 84px;
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.45s ease, transform 0.45s ease;
@@ -350,6 +377,53 @@ body.theme-luka .exp-period {
   font-size: 13px;
   color: var(--luka-accent);
   font-weight: 500;
+}
+
+body.theme-luka .experience-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: var(--luka-secondary);
+  font-size: 14px;
+}
+
+body.theme-luka .experience-list li {
+  margin-bottom: 5px;
+}
+
+body.theme-luka .skills-list {
+  columns: 2;
+  column-gap: 40px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+body.theme-luka .skills-list li {
+  margin-bottom: 6px;
+  break-inside: avoid;
+}
+
+body.theme-luka .interests-list {
+  margin: 0;
+}
+
+body.theme-luka .interests-list div {
+  margin-bottom: 14px;
+}
+
+body.theme-luka .interests-list div:last-child {
+  margin-bottom: 0;
+}
+
+body.theme-luka .interests-list dt {
+  color: var(--luka-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body.theme-luka .interests-list dd {
+  margin: 2px 0 0;
+  color: var(--luka-secondary);
+  font-size: 14px;
 }
 
 body.theme-luka .project-card {
@@ -484,6 +558,24 @@ body.theme-luka strong {
 }
 
 @media (max-width: 640px) {
+  body.theme-luka .nav-container {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  body.theme-luka .nav-left {
+    gap: 10px;
+  }
+
+  body.theme-luka .nav-left a {
+    font-size: 12px;
+  }
+
+  body.theme-luka .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
   body.theme-luka .image.avatar img {
     width: 148px;
     height: 148px;
@@ -509,6 +601,23 @@ body.theme-luka strong {
 }
 
 @media (max-width: 480px) {
+  body.theme-luka .top-nav {
+    height: 72px;
+  }
+
+  body.theme-luka .nav-left {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+
+  body.theme-luka .sidebar {
+    padding-top: 92px;
+  }
+
+  body.theme-luka .skills-list {
+    columns: 1;
+  }
+
   body.theme-luka .section {
     margin-bottom: 32px;
   }
