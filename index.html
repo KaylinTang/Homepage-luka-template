@@ -27,18 +27,15 @@
   <nav class="top-nav" aria-label="Primary navigation">
     <div class="nav-container">
       <div class="nav-left">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#research-projects">Research Projects</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-right">
         <button id="themeToggle" class="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">
           <i class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
+      </div>
+      <div class="nav-right nav-links">
+        <a href="#about">About</a>
+        <a href="#research-projects">Research Projects</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -47,18 +44,18 @@
     <header class="sidebar">
       <div class="profile-card">
         <div class="image avatar">
-          <img src="assets/img/avatar.svg" alt="Profile avatar for Kaylin(Huilin) Tang">
+          <img src="assets/img/web-photo-0.JPEG" alt="Portrait of Kaylin Tang">
         </div>
 
         <h1 class="site-name">Kaylin(Huilin) Tang</h1>
-        <p class="site-role">Master of Information Technology · Applied Computing<br>The University of Western Australia</p>
+        <p class="site-role">Master of Information Technology · Applied Computing<br><a class="institution-link" href="https://www.uwa.edu.au/" target="_blank" rel="noopener noreferrer">The University of Western Australia</a></p>
         <p class="site-location">Perth, Australia</p>
         <p class="site-email">
           <a href="mailto:24320547@student.uwa.edu.au">24320547@student.uwa.edu.au</a>
         </p>
 
         <div class="social-icons" aria-label="Contact links">
-          <a href="mailto:24320547@student.uwa.edu.au" title="Email" aria-label="Email Kaylin(Huilin) Tang">
+          <a href="https://outlook.office.com/mail/" target="_blank" rel="noopener noreferrer" title="Open Outlook Web" aria-label="Open Outlook Web">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
           <a
@@ -72,6 +69,11 @@
           </a>
         </div>
 
+        <a class="cv-link" href="assets/cv/cv_kaylin.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+          View CV
+        </a>
+
       </div>
     </header>
 
@@ -79,7 +81,7 @@
       <section class="section" id="about">
         <h2 class="section-title">About Me</h2>
         <div class="section-body">
-          <p>I am Kaylin(Huilin) Tang, a Master of Information Technology student at The University of Western Australia, specialising in Applied Computing. I am currently based in Perth, Australia.</p>
+          <p>I am Kaylin(Huilin) Tang, a Master of Information Technology student at <a class="institution-link" href="https://www.uwa.edu.au/" target="_blank" rel="noopener noreferrer">The University of Western Australia</a>, specialising in Applied Computing. I am currently based in Perth, Australia.</p>
         </div>
       </section>
 
@@ -88,9 +90,9 @@
         <div class="section-body">
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <img src="assets/img/university-of-western-australia-seeklogo.svg" alt="The University of Western Australia logo" class="institution-logo">
               <div class="experience-content">
-                <p class="exp-title"><strong>The University of Western Australia</strong></p>
+                <p class="exp-title"><a class="institution-link" href="https://www.uwa.edu.au/" target="_blank" rel="noopener noreferrer"><strong>The University of Western Australia</strong></a></p>
                 <p class="exp-detail">Master of Information Technology</p>
                 <p class="exp-detail">Specialisation: Applied Computing | Full-time</p>
                 <p class="exp-detail">Perth, Australia</p>
@@ -101,7 +103,10 @@
 
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <span class="institution-logo theme-logo">
+                <img class="theme-logo-on-light" src="assets/img/NUAA_logo_dark.png" alt="Nanjing University of Aeronautics and Astronautics logo">
+                <img class="theme-logo-on-dark" src="assets/img/NUAA_logo_light.png" alt="Nanjing University of Aeronautics and Astronautics logo">
+              </span>
               <div class="experience-content">
                 <p class="exp-title"><strong>Nanjing University of Aeronautics and Astronautics</strong></p>
                 <p class="exp-detail">Bachelor of Engineering</p>
@@ -327,6 +332,8 @@
       <section class="section" id="contact">
         <h2 class="section-title">Contact</h2>
         <div class="section-body contact-list">
+          <img class="contact-photo" src="assets/img/web-photo-1.png" alt="Kaylin Tang">
+          <p>You can reach me by email or connect with me on LinkedIn.</p>
           <p><strong>Email:</strong> <a href="mailto:24320547@student.uwa.edu.au">24320547@student.uwa.edu.au</a></p>
           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kaylin-t-57ba13352/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kaylin-t-57ba13352</a></p>
         </div>
