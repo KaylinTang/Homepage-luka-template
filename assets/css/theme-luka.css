@@ -118,7 +118,7 @@ body.theme-luka .nav-container {
 body.theme-luka .nav-left {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 18px;
 }
 
 body.theme-luka .nav-left a {
@@ -357,6 +357,8 @@ body.theme-luka .institution-logo {
 
 body.theme-luka .experience-content {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 body.theme-luka .experience-content p {
@@ -390,16 +392,32 @@ body.theme-luka .experience-list li {
   margin-bottom: 5px;
 }
 
-body.theme-luka .skills-list {
-  columns: 2;
-  column-gap: 40px;
+body.theme-luka .skills-groups {
   margin: 0;
-  padding-left: 20px;
 }
 
-body.theme-luka .skills-list li {
-  margin-bottom: 6px;
-  break-inside: avoid;
+body.theme-luka .skills-groups div {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+body.theme-luka .skills-groups div:last-child {
+  margin-bottom: 0;
+}
+
+body.theme-luka .skills-groups dt {
+  color: var(--luka-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body.theme-luka .skills-groups dd {
+  margin: 0;
+  color: var(--luka-secondary);
+  font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 body.theme-luka .interests-list {
@@ -424,6 +442,10 @@ body.theme-luka .interests-list dd {
   margin: 2px 0 0;
   color: var(--luka-secondary);
   font-size: 14px;
+}
+
+body.theme-luka .contact-list a {
+  overflow-wrap: anywhere;
 }
 
 body.theme-luka .project-card {
@@ -564,11 +586,11 @@ body.theme-luka strong {
   }
 
   body.theme-luka .nav-left {
-    gap: 10px;
+    gap: 8px;
   }
 
   body.theme-luka .nav-left a {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   body.theme-luka .theme-toggle {
@@ -602,20 +624,36 @@ body.theme-luka strong {
 
 @media (max-width: 480px) {
   body.theme-luka .top-nav {
-    height: 72px;
+    height: 92px;
+  }
+
+  body.theme-luka .nav-container {
+    align-items: center;
   }
 
   body.theme-luka .nav-left {
-    flex-wrap: wrap;
-    gap: 4px 10px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  body.theme-luka .nav-left a {
+    line-height: 1.2;
+    text-align: center;
+    overflow-wrap: anywhere;
   }
 
   body.theme-luka .sidebar {
-    padding-top: 92px;
+    padding-top: 112px;
   }
 
-  body.theme-luka .skills-list {
-    columns: 1;
+  body.theme-luka .skills-groups div {
+    display: block;
+  }
+
+  body.theme-luka .skills-groups dt {
+    margin-bottom: 2px;
   }
 
   body.theme-luka .section {
@@ -624,6 +662,10 @@ body.theme-luka strong {
 
   body.theme-luka .section-title {
     font-size: 18px;
+  }
+
+  body.theme-luka .section {
+    scroll-margin-top: 108px;
   }
 
   body.theme-luka .project-card,
